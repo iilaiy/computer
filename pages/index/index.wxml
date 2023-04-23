@@ -1,0 +1,17 @@
+<view class="calculator">
+  <view class="screen">
+    <view class="prev">
+      <text wx:for="{{screenPrev}}" wx:key="index">{{item}}</text>
+    </view>
+    <view class="current">
+      <text>{{currentVal ? currentVal : calculationResult}}</text>
+    </view>
+  </view>
+  <view class="buttons">
+    <view class='btnGroup' wx:for="{{buttonsArray}}" wx:key="index">
+      <view wx:for="{{item}}" wx:for-item="val" wx:for-key="i" wx:key="i" class='item' data-item="{{val}}" bindtap="clickButton">
+      {{val}}
+      </view>
+    </view>
+  </view>
+</view>
