@@ -59,7 +59,7 @@ Page({
           // 正负
           // 当值为0时不做任何操作
           if (_this.currentVal == 0) break
-          if (_this.currentVal.split('')[0] == '-') {
+          if (_this.currentVal.toString().split('')[0] == '-') {
             _this.currentVal = _this.currentVal.toString().replace(/^./, '')
           } else {
             _this.currentVal = '-' + _this.currentVal
