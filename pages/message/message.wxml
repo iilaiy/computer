@@ -1,0 +1,36 @@
+<!--pages/message/message.wxml-->
+<!-- <text>{{times}}</text> -->
+
+<wxs src="/wxs/message.wxs" module="msg"></wxs>
+<view class="tbs">
+    <input type="text" bindblur="namefun" value="{{uname}}" placeholder="请输入姓名："/>
+    <view class="child" >
+      <picker range="{{genderlist}}" bindchange="genderfun">
+      {{gender}}
+    </picker>
+    </view>
+    <view class="child" >
+      <picker range="{{postlist}}" bindchange="postfun">
+      {{post}}
+    </picker>
+    </view>
+    <button bindtap="adduser">添加</button>
+</view>
+<view class="tab">
+  <view class="column">
+    <label>序号</label>
+    <label>姓名</label>
+    <label>性别</label>
+    <label>职务</label>
+    <label>操作</label>
+  </view>
+  <view class="list" wx:for="{{person}}" wx:key="index">
+    <label>{{item.id}}</label>
+    <label>{{item.name}}</label>
+    <label>{{msg.filterGender(item.gender)}}</label>
+    <label>{{msg.filterpost(item.post)}}</label>
+    <label>
+    <button bindtap="delfun" data-id="{{index}}">删除</button>
+    </label>
+  </view>
+</view>

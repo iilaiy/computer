@@ -1,0 +1,12 @@
+function filterGender(x){
+  return x === 1 ? '男' : '女';
+}
+function filterpost(x){
+  return x === 1 ? '主管' : x === 2 ? '组长' : '员工'
+}
+//导出去
+module.exports = {
+  //不能使用ES6的简写模式，必须只能是: key:value[哪怕前后一致]
+  filterGender : filterGender,
+  filterpost : filterpost
+}

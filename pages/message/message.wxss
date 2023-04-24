@@ -1,0 +1,49 @@
+.tab{
+  width: 90%;
+  margin: 20rpx auto;
+}
+.tab .column,
+.tab .list{
+  width: 100%;
+  border-bottom: 1rpx solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.tab .column label,
+.tab .list label{
+  text-align: center;
+  line-height: 60rpx;
+  font-weight: bold;
+  width: 20%;
+}
+.tab .list label{
+  font-weight: normal;
+}
+.tab .list label button{
+  width: 100%;
+  padding: 0;
+  background-color: rgb(233, 135, 43);
+  color: white;
+  line-height: 50rpx;
+  margin: 10rpx ;
+}
+.tbs{
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  border: 1rpx solid black;
+}
+.tbs input,
+.tbs .child{
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 20rpx auto;
+  border-radius: 15rpx;
+  border: 1rpx solid rgb(161, 158, 158);
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.tbs button{
+  margin: 30rpx auto;
+}
